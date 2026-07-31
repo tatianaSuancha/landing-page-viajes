@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación y Carrito Desplegable</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Aqui empieza la barra de navegación -->
+<header class="encabezado-navegacion">
+    <nav class="barra-navegacion">
+        <a href="#" class="logotipo-marca">✈️ ViajaYa</a>
+
+        <!-- Esta es la lista con los enlaces de la barra de navegación -->
+        <ul class="lista-navegacion">
+            <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+            <li><a href="#paquetes" class="enlace-navegacion">Paquetes</a></li>
+        </ul>
+
+        <!-- Este es el botón para abrir el carrito de compras por la parte derecha -->
+        <button class="boton-abrir-carrito" id="boton-abrir-carrito">
+            🛒 Carrito
+            <span class="insignia-contador-carrito" id="contador-carrito">2</span>
+        </button>
+    </nav>
+</header>
+
+
+<!-- Capa oscura y barra lateral del carrito de compras -->
+<div class="capa-oscura-carrito" id="capa-oscura-carrito">
+    <div class="panel-lateral-carrito">
+
+        <div class="encabezado-carrito">
+            <h3>Tu Carrito de Viajes</h3>
+            <button class="boton-cerrar-carrito" id="boton-cerrar-carrito">&times;</button>
+        </div>
+
+        <div class="cuerpo-carrito">
+            <!-- Ítem del carrito estructurado con CSS GRID -->
+            <div class="elemento-carrito">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80" alt="Cancún" class="imagen-producto-carrito">
+                <div class="detalles-producto-carrito">
+                    <h4>Cancún Paradise</h4>
+                    <p>$850 USD</p>
+                </div>
+                <button class="boton-eliminar-producto" title="Eliminar">&times;</button>
+            </div>
+
+            <!-- Segundo ítem estructurado con CSS GRID -->
+            <div class="elemento-carrito">
+                <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=200&q=80" alt="Machu Picchu" class="imagen-producto-carrito">
+                <div class="detalles-producto-carrito">
+                    <h4>Machu Picchu Mágico</h4>
+                    <p>$720 USD</p>
+                </div>
+                <button class="boton-eliminar-producto" title="Eliminar">&times;</button>
+            </div>
+        </div>
+
+        <div class="pie-carrito">
+            <div class="resumen-total-carrito">
+                <span>Total:</span>
+                <span>$1,570 USD</span>
+            </div>
+            <button class="boton-confirmar-reserva">Reservar Ahora</button>
+        </div>
+    </div>
+</div>
+<script src="./js/app.js" defer></script>
+</body>
+</html>
