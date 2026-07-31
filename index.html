@@ -10,238 +10,104 @@
 
 <body>
 
-    <!-- Aqui empieza la barra de navegación -->
-    <header class="encabezado-navegacion">
-        <nav class="barra-navegacion">
-            <a href="#" class="logotipo-marca">✈️ ViajaYa</a>
+<!-- Aqui empieza la barra de navegación -->
+<header class="encabezado-navegacion">
+    <nav class="barra-navegacion">
+        <a href="#" class="logotipo-marca">✈️ ViajaYa</a>
+        <!-- Esta es la lista con los enlaces de la barra de navegación -->
+        <ul class="lista-navegacion">
+            <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
+            <li><a href="#paquetes" class="enlace-navegacion">Paquetes</a></li>
+        </ul>
+        <!-- Este es el botón para abrir el carrito de compras por la parte derecha -->
+        <button class="boton-abrir-carrito" id="boton-abrir-carrito">
+            🛒 Carrito <span class="insignia-contador-carrito" id="contador-carrito">2</span>
+        </button>
+    </nav>
+</header>
 
-            <!-- Esta es la lista con los enlaces de la barra de navegación -->
-            <ul class="lista-navegacion">
-                <li><a href="#inicio" class="enlace-navegacion">Inicio</a></li>
-                <li><a href="#paquetes" class="enlace-navegacion">Paquetes</a></li>
-            </ul>
+<!-- Capa oscura y barra lateral del carrito de compras -->
+<div class="capa-oscura-carrito" id="capa-oscura-carrito">
+    <div class="panel-lateral-carrito">
 
-            <!-- Este es el botón para abrir el carrito de compras por la parte derecha -->
-            <button class="boton-abrir-carrito" id="boton-abrir-carrito">
-                🛒 Carrito
-                <span class="insignia-contador-carrito" id="contador-carrito">2</span>
-            </button>
-        </nav>
-    </header>
+        <div class="encabezado-carrito">
+            <h3>Tu Carrito de Viajes</h3>
+            <!-- Botón para cerrar -->
+            <button class="boton-cerrar-carrito" id="boton-cerrar-carrito">&times;</button>
+        </div>
 
+        <!-- Dejamos el cuerpo vacío para que JS inyecte los elementos -->
+        <div class="cuerpo-carrito" id="cuerpo-carrito"></div>
 
-    <!-- Capa oscura y barra lateral del carrito de compras -->
-    <div class="capa-oscura-carrito" id="capa-oscura-carrito">
-        <div class="panel-lateral-carrito">
-
-            <div class="encabezado-carrito">
-                <h3>Tu Carrito de Viajes</h3>
-                <button class="boton-cerrar-carrito" id="boton-cerrar-carrito">&times;</button>
+        <div class="pie-carrito">
+            <div class="resumen-total-carrito">
+                <span>Total:</span>
+                <!-- Le ponemos un id al total para cambiarlo con JS -->
+                <span id="total-carrito"></span>
             </div>
-
-            <div class="cuerpo-carrito">
-                <!-- Ítem del carrito estructurado con CSS GRID -->
-                <div class="elemento-carrito">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=200&q=80"
-                        alt="Cancún" class="imagen-producto-carrito">
-                    <div class="detalles-producto-carrito">
-                        <h4>Cancún Paradise</h4>
-                        <p>$850 USD</p>
-                    </div>
-                    <button class="boton-eliminar-producto" title="Eliminar">&times;</button>
-                </div>
-
-                <!-- Segundo ítem estructurado con CSS GRID -->
-                <div class="elemento-carrito">
-                    <img src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=200&q=80"
-                        alt="Machu Picchu" class="imagen-producto-carrito">
-                    <div class="detalles-producto-carrito">
-                        <h4>Machu Picchu Mágico</h4>
-                        <p>$720 USD</p>
-                    </div>
-                    <button class="boton-eliminar-producto" title="Eliminar">&times;</button>
-                </div>
-            </div>
-
-            <div class="pie-carrito">
-                <div class="resumen-total-carrito">
-                    <span>Total:</span>
-                    <span>$1,570 USD</span>
-                </div>
-                <button class="boton-confirmar-reserva">Reservar Ahora</button>
-            </div>
+            <button class="boton-confirmar-reserva">Reservar Ahora</button>
         </div>
     </div>
+</div>
 
-    <!------------------------------------------------------------->
-    <!-- Aqui inicio mi seccion del HERO VIAJAYA X LIZETH
-     utilizando la etiqueta semantica section por que nos dividimos x
-     secciones como equipo-->
+<!------------------------------------------------------------->
+<!-- Aqui inicio mi seccion del HERO VIAJAYA X LIZETH
+ utilizando la etiqueta semantica section por que nos dividimos x
+ secciones como equipo-->
 
-    <section class="hero" id="inicio">
+<section class="hero" id="inicio">
+    <!-- Aqui creo un contenerdor con <div> para agrupar el titulo, la
+     descripción y el botón -->
+    <div class="contenedor-hero">
+        <!-- Aqui creo el titulo de la sección con h1 y
+         por se el titulo principal de la página -->
+        <h1 class="titulo-hero">¡Descubre Tu destino Soñado!</h1>
+        <!-- Aqui creo la descripción de la sección con un
+         parrafo que explica lo que ofrecemos como tienda de
+         viajes -->
+        <p class="descripcion-hero">Aprovecha nuestros paquetes turísticos exclusivos con todo incluido. ¡Viaja seguro y
+            al mejor precio!</p>
+        <!-- Aqui creo un botón que redirige a otra página que seria
+         la sección paquetes-->
+        <a class="boton-hero" href="#paquetes"> Ver Ofertas Disponibles </a>
+        <!-- Aqui cierro el contenedor con </div> -->
+    </div>
+</section>
+<!-- Aqui cierro la </section> del HERO VIAJAYA X LIZETH -->
 
-        <!-- Aqui creo un contenerdor con <div> para agrupar el titulo, la
-         descripción y el botón -->
-        <div class="contenedor-hero">
+<!-- Seccion Paquetes -->
+<section class="seccion-paquetes" id="paquetes">
+    <h2 class="titulo-seccion">Paquetes Disponibles</h2>
 
-            <!-- Aqui creo el titulo de la sección con h1 y
-             por se el titulo principal de la página -->
-            <h1 class="titulo-hero">¡Descubre Tu destino Soñado!</h1>
-
-            <!-- Aqui creo la descripción de la sección con un
-             parrafo que explica lo que ofrecemos como tienda de
-             viajes -->
-            <p class="descripcion-hero">Aprovecha nuestros paquetes turísticos exclusivos con todo
-                incluido. ¡Viaja seguro y al mejor precio!</p>
-
-            <!-- Aqui creo un botón que redirige a otra página que seria
-             la sección paquetes-->
-            <a class="boton-hero" href="#paquetes">
-                Ver Ofertas Disponibles
-            </a>
-
-            <!-- Aqui cierro el contenedor con </div> -->
+    <!-- Dejamos el contenedor vacío y le ponemos el id "contenedor-tarjetas" -->
+    <div class="contenedor-tarjetas" id="contenedor-tarjetas">
+        <!-- JavaScript inyectará las tarjetas aquí mágicamente -->
+    </div>
+</section>
+<footer class="footer">
+    <section class="footer-container">
+        <div class="footer-brand">
+            <h2 class="logo">
+                <span class="plane-icon">✈️</span> ViajaYa
+            </h2>
+            <p>Tu agencia de confianza para explorar el mundo sin preocupaciones.</p>
+            <p>Viajes inolvidables al alcance de todos.</p>
         </div>
-
-
+        <nav class="footer-links" aria-label="Enlaces Rápidos">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo de Viajes</a></li>
+            </ul>
+        </nav>
     </section>
-    <!-- Aqui cierro la </section> del HERO VIAJAYA X LIZETH -->
-
-    <!-- Seccion Paquetes -->
-    <section class="seccion-paquetes" id="paquetes">
-        <h2 class="titulo-seccion">Paquetes Disponibles</h2>
-        <div class="contenedor-tarjetas">
-
-            <!-- Tarjeta 1 -->
-            <article class="tarjeta-viaje" data-name="Cancún Paradise">
-
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80"
-                    alt="Imagen Cancún" class="imagen-tarjeta">
-
-                <h2 class="titulo-tarjeta">Cancún Paradise</h2>
-
-                <p class="descripcion-tarjeta">
-                    5 días y 4 noches en resort All Inclusive con tiquetes aéreos incluidos.
-                </p>
-
-                <!-- Información inferior de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$850 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-
-            </article>
-
-            <!-- Tarjeta 2 -->
-            <article class="tarjeta-viaje" data-name="Machu Picchu Mágico">
-
-                <img src="https://images.unsplash.com/photo-1508849789987-4e5333c12b78?auto=format&fit=crop&w=500&q=80"
-                    alt="Imagen Machu Picchu" class="imagen-tarjeta">
-
-                <h2 class="titulo-tarjeta">Machu Picchu Mágico</h2>
-
-                <p class="descripcion-tarjeta">
-                    Recorrido guiado por Cuzco y la ciudadela inca con tren de primera clase.
-                </p>
-
-                <!-- Información inferior de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$720 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-
-            </article>
-
-            <!-- Tarjeta 3 -->
-            <article class="tarjeta-viaje" data-name="París Romance">
-
-                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80"
-                    alt="Imagen París" class="imagen-tarjeta">
-
-                <h2 class="titulo-tarjeta">París Romance</h2>
-
-                <p class="descripcion-tarjeta">
-                    7 días explorando la Torre Eiffel, Museos de Louvre y crucero por el Sena.
-                </p>
-
-                <!-- Información inferior de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$1450 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-
-            </article>
-
-            <!-- Tarjeta 4 -->
-            <article class="tarjeta-viaje" data-name="Tokio Moderno">
-                <img src="../img/tokio.png" alt="Imagen tokio" class="imagen-tarjeta">
-                <h2 class="titulo-tarjeta">Tokio Moderno</h2>
-                <p class="descripcion-tarjeta">Descubre la mezcla perfecta de tradición y modernidad en la ciudad que nunca duerme.</p>
-                <!--parte de abajo de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$1890 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-
-            </article>
-
-            <!-- Tarjeta 5 -->
-            <article class="tarjeta-viaje" data-name="Roma Clásica">
-                <img src="../img/roma.jpg" alt="Imagen roma" class="imagen-tarjeta">
-                <h2 class="titulo-tarjeta">Roma Clásica</h2>
-                <p class="descripcion-tarjeta">Explora la historia y la arquitectura de la antigua Roma, donde cada calle cuenta una historia.</p>
-                <!--parte de abajo de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$2000 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-            </article>
-
-            <!-- Tarjeta 6 -->
-            <article class="tarjeta-viaje" data-name="Bariloche Natural">
-                <img src="../img/bariloche.jpg" alt="Imagen bariloche" class="imagen-tarjeta">
-                <h2 class="titulo-tarjeta">Bariloche Natural</h2>
-                <p class="descripcion-tarjeta">Sumérgete en la belleza natural de Bariloche, con sus lagos cristalinos y montañas majestuosas.</p>
-                <!--parte de abajo de la tarjeta -->
-                <div class="info-tarjeta">
-                    <p class="precio">$2100 USD</p>
-                    <button class="boton-agregar">Agregar +</button>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <section class="footer-container">
-
-            <div class="footer-brand">
-                <h2 class="logo">
-                    <span class="plane-icon">✈️</span> ViajaYa
-                </h2>
-                <p>Tu agencia de confianza para explorar el mundo sin preocupaciones.</p>
-                <p>Viajes inolvidables al alcance de todos.</p>
-            </div>
-
-            <nav class="footer-links" aria-label="Enlaces Rápidos">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo de Viajes</a></li>
-                </ul>
-            </nav>
-        </section>
-
-        <div class="footer-bottom">
-            <p>&copy; 2026 ViajaYa. Todos los derechos reservados. Proyecto Académico.</p>
-        </div>
-    </footer>
-
-
-
-    <!-- Scripts JavaScript -->
-    <script src="./js/app.js" defer></script>
-    <script src="./js/cards.js" defer></script>
-
+    <div class="footer-bottom">
+        <p>&copy; 2026 ViajaYa. Todos los derechos reservados. Proyecto Académico.</p>
+    </div>
+</footer>
+<!-- Scripts JavaScript -->
+<script src="./js/app.js" defer></script>
+<script src="./js/cards.js" defer></script>
 </body>
 
 </html>
