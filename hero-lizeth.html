@@ -8,6 +8,7 @@
     <!--Aqui defino el título de la página <title>Hero ViajaYa - Lizeth</title>-->
     <title>Hero ViajaYa - Lizeth</title>
 
+    <!------------------------------------------------------------->
     <!-- Aqui inicio con los stilos CSS del HERO VIAJAYA X LIZETH-->
     <style>
         /* Aquí Se cuardaron los colores y la transición principal del proyecto */
@@ -34,15 +35,29 @@
 
         /* Ahora quito los espacios que trae el navegador por defecto */
         * {
+
+            /* Aqui se quita el espacio exterior de todos los elementos */
             margin: 0;
+
+            /* Aqui se define el espacio interior de todos los elementos */
             padding: 0;
+
+            /* Aqui se hace que el ancho y el alto incluyan 
+            el padding y el borde del elemento*/
             box-sizing: border-box;
         }
 
-        /* Y defino los estilos generales  para el hero */
+        /* Y se definen los estilos generales  para el hero */
         body {
+
+            /* Se usa Arial como fuente principal y Si no está 
+            disponible, se usa Helvetica o una fuente sans-serif*/
             font-family: Arial, Helvetica, sans-serif;
+
+            /* Aqui se coloca el color de fondo usando la variable del proyecto */
             background-color: var(--color-fondo);
+
+            /* Aqui se coloca el color general de los textos usando otra variable */
             color: var(--color-texto);
 
         }
@@ -50,21 +65,33 @@
         /* Aqui se crea la seccion principal del hero */
         .hero {
 
+            /* Se le da una altura mínima de 620 píxeles */
             min-height: 620px;
 
 
             /* Se usa Flexbox para centrar el contenido */
             display: flex;
+
+            /* Se centra el contenido horizontalmente */
             justify-content: center;
+
+            /* Se centra el contenido verticalmente */
             align-items: center;
 
+            /* Agrego 40 píxeles de espacio arriba y abajo 
+            y 20 píxeles a los lados*/
             padding: 40px 20px;
 
             /* Se coloca una capa oscura sobre la imagen para leer mejor el texto */
             background-image:
+
+                /* Se crea una capa oscura para que el texto 
+                blanco se pueda leer mejor */
                 linear-gradient(rgba(15, 23, 42, 0.38),
                     rgba(15, 23, 42, 0.38)),
 
+                /* Se coloca la imagen principal que tengo 
+                guardada en la carpeta img*/
                 url("img/fondo-viajes.png");
 
 
@@ -84,14 +111,25 @@
         una columna */
         .contenedor-hero {
 
+            /* Se hace que el contenedor use todo el ancho disponible */
             width: 100%;
+
+            /* Se limito el ancho para que el contenido no se extienda demasiado */
             max-width: 900px;
 
+            /* Se activo Flexbox para organizar los elementos */
             display: flex;
+
+            /* Se coloco el título, el texto y el botón uno debajo del otro */
             flex-direction: column;
+
+            /* Se centran los elementos de forma horizontal */
             align-items: center;
 
+            /* Se centra el contenido de texto */
             text-align: center;
+
+            /* Se centro el texto en color blanco */
             color: white;
 
             /* Se agrega una sombra al texto para que se lea
@@ -103,10 +141,16 @@
         /* Se diseña el título principal */
         .titulo-hero {
 
+            /* Se limito el ancho del título para controlar mejor sus líneas */
             max-width: 850px;
+
+            /* Se agrego el espacio debajo del título */
             margin-bottom: 28px;
 
+            /* Se le da un tamaño grande al título */
             font-size: 4rem;
+
+            /* Se ajusta el espacio entre las líneas del título */
             line-height: 1.2;
 
         }
@@ -114,10 +158,16 @@
         /* Se diseña el texto descriptivo */
         .descripcion-hero {
 
+            /* Se limito el ancho para que el texto no quede demasiado extendido */
             max-width: 700px;
+
+            /* Se agrega el espacio debajo del texto para separarlo del botón */
             margin-bottom: 35px;
 
+            /* Se le da un tamaño de fuente moderado al texto descriptivo */
             font-size: 1.35rem;
+
+            /* Se aumento el espacio entre las líneas para facilitar la lectura */
             line-height: 1.6;
 
 
@@ -125,36 +175,63 @@
 
         /* Se le da una apariencia de botón al enlace */
         .boton-hero {
+            
+            /* Se permite que el enlace tenga forma de botón */
             display: inline-block;
-            padding: 18px 40px;
 
-            border: none;
-            border-radius: 40px;
+            /* Se agrega espacio dentro del botón */
+            padding: 18px 42px;
 
-            background-color: var(--color-primario);
+            /* Se coloca el fondo turquesa del botón */
+            background-color: #14b8d4;
+
+            /* Coloco el texto en color blanco */
             color: white;
 
+            /* Defino el tamaño del texto */
             font-size: 1.1rem;
+
+            /* Se coloca el texto en negrita */
             font-weight: bold;
+
+            /* Redondeo bastante las esquinas */
+            border-radius: 40px;            
+
+            /* Se quita la línea inferior del enlace */
             text-decoration: none;
+
+            /* Se muestra la mano cuando paso el cursor */
             cursor: pointer;
 
-            /* Se agrega una transición suave al pasar el cursor*/
-            transition:
-                background-color var(--transicion-suave),
-                transform var(--transicion-suave);
+            /* Y evito que el botón herede la sombra del texto */
+            text-shadow: none;
+
+            /* Se agrega una transición suave */
+            transition:background-color var(--transicion-suave),
+            transform var(--transicion-suave);
         }
 
         /* Ahora que cambie el botón cuando paso el cursor */
         .boton-hero:hover {
-            background-color: var(--color-primario-hover);
+            
+            /* Se cambia a un turquesa más oscuro */
+            background-color: #0891b2;
+
+            /* Se mueve el botón un poco hacia arriba */
             transform: translateY(-3px);
         }
 
         /* Se adacta el diseño para tabletas */
         @media (max-width: 768px) {
+
+            /* Se ajusta la sección principal del HERO para tabletas */
             .hero {
+
+                /* Se reduce la altura mínima del HERO */
                 min-height: 520px;
+
+                /*  Se agrega 35 píxeles de espacio arriba y abajo
+                y 24 píxeles a los lados*/
                 padding: 35px 24px;
 
                 /*Se ajusta la posición para que los monumentos
@@ -162,11 +239,17 @@
                 background-position: center center;
             }
 
+            /* Se ajusto el título para que no quede demasiado grande */
             .titulo-hero {
+
+                /* Se redijo el tamaño del título */
                 font-size: 3rem;
             }
 
+            /* Se ajusta la descripción para que se lea mejor en tablet */
             .descripcion-hero {
+
+                /* Se redujo el tamaño del texto descriptivo */
                 font-size: 1.1rem;
             }
         }
@@ -233,6 +316,9 @@
         
     </style>
 
+    <!-- Aqui cierro la </style> del HERO VIAJAYA X LIZETH -->
+    <!------------------------------------------------------------->
+
 
 
 
@@ -240,6 +326,7 @@
 
 <body>
 
+    <!------------------------------------------------------------->
     <!-- Aqui inicio mi seccion del HERO VIAJAYA X LIZETH 
      utilizando la etiqueta semantica section por que nos dividimos x
      secciones como equipo-->
@@ -262,7 +349,9 @@
 
             <!-- Aqui creo un botón que redirige a otra página que seria
              la sección paquetes-->
-            <a class="boton-hero" href="#paquetes">Ver Ofertas Disponibles</a>
+            <a class="boton-hero" href="#paquetes">
+                Ver Ofertas Disponibles
+            </a>
 
             <!-- Aqui cierro el contenedor con </div> -->
         </div>
@@ -270,6 +359,7 @@
 
     </section>
     <!-- Aqui cierro la </section> del HERO VIAJAYA X LIZETH -->
+    
 
 
 </body>
