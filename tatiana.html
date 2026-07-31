@@ -17,17 +17,17 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .contenedor-tarjetas {
-            display: flex;
+            display: flex;/* flexbox que permite organizar las tarjetas*/
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap;
+            flex-wrap: wrap;/* permite que las tarjetas se ajusten a la pantalla y se muevan a la siguiente línea si es necesario */
         }
         .tarjeta-viaje {
         width: 330px;
         background-color: white;
         border: 1px solid var(--color-borde);
-        border-radius: 12px;
-        overflow: hidden;
+        border-radius: 12px;/* esquinas redondeadas */
+        overflow: hidden;/* oculta el contenido que sobresale */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         transition: var(--transicion-suave);
         }
@@ -40,7 +40,7 @@
         .imagen-tarjeta {
             width: 100%;
             height: 220px;
-            object-fit: cover;
+            object-fit: cover;/* ajusta la imagen sin deformarla */
         }
 
         .titulo-tarjeta {
@@ -56,8 +56,8 @@
         }
 
         .info-tarjeta {
-            display: flex;
-            justify-content: space-between;
+            display: flex; /* coloca el precio y el botón en la misma fila */
+            justify-content: space-between;/* deja el precio a la izquierda y el botón a la derecha */
             align-items: center;
             margin: 25px 20px 20px;
         }
@@ -73,14 +73,14 @@
             color: white;
             border: none;
             padding: 10px 18px;
-            border-radius: 8px;
-            cursor: pointer;
+            border-radius: 8px;/* esquinas redondeadas */
+            cursor: pointer;/* cambia el cursor a una mano al pasar sobre el botón */
             font-size: 0.95rem;
             transition: var(--transicion-suave);
         }
 
         .boton-agregar:hover {
-            background-color: var(--color-primario-hover);
+            background-color: var(--color-primario-hover);/* cambia el color del botón al pasar el cursor */
         }
 
 
