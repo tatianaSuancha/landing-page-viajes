@@ -72,14 +72,13 @@
             </div>
         </div>
     </div>
-    <script src="./js/app.js" defer></script>
 
     <!------------------------------------------------------------->
-    <!-- Aqui inicio mi seccion del HERO VIAJAYA X LIZETH 
+    <!-- Aqui inicio mi seccion del HERO VIAJAYA X LIZETH
      utilizando la etiqueta semantica section por que nos dividimos x
      secciones como equipo-->
 
-    <section class="hero">
+    <section class="hero" id="inicio">
 
         <!-- Aqui creo un contenerdor con <div> para agrupar el titulo, la
          descripción y el botón -->
@@ -108,6 +107,113 @@
     </section>
     <!-- Aqui cierro la </section> del HERO VIAJAYA X LIZETH -->
 
+    <!-- Seccion Paquetes -->
+    <section class="seccion-paquetes" id="paquetes">
+        <h2 class="titulo-seccion">Paquetes Disponibles</h2>
+        <div class="contenedor-tarjetas">
+
+            <!-- Tarjeta 1 -->
+            <article class="tarjeta-viaje" data-name="Cancún Paradise">
+
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80"
+                    alt="Imagen Cancún" class="imagen-tarjeta">
+
+                <h2 class="titulo-tarjeta">Cancún Paradise</h2>
+
+                <p class="descripcion-tarjeta">
+                    5 días y 4 noches en resort All Inclusive con tiquetes aéreos incluidos.
+                </p>
+
+                <!-- Información inferior de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$850 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+
+            </article>
+
+            <!-- Tarjeta 2 -->
+            <article class="tarjeta-viaje" data-name="Machu Picchu Mágico">
+
+                <img src="https://images.unsplash.com/photo-1508849789987-4e5333c12b78?auto=format&fit=crop&w=500&q=80"
+                    alt="Imagen Machu Picchu" class="imagen-tarjeta">
+
+                <h2 class="titulo-tarjeta">Machu Picchu Mágico</h2>
+
+                <p class="descripcion-tarjeta">
+                    Recorrido guiado por Cuzco y la ciudadela inca con tren de primera clase.
+                </p>
+
+                <!-- Información inferior de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$720 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="tarjeta-viaje" data-name="París Romance">
+
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=80"
+                    alt="Imagen París" class="imagen-tarjeta">
+
+                <h2 class="titulo-tarjeta">París Romance</h2>
+
+                <p class="descripcion-tarjeta">
+                    7 días explorando la Torre Eiffel, Museos de Louvre y crucero por el Sena.
+                </p>
+
+                <!-- Información inferior de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$1450 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+
+            </article>
+
+            <!-- Tarjeta 4 -->
+            <article class="tarjeta-viaje" data-name="Tokio Moderno">
+                <img src="../img/tokio.png" alt="Imagen tokio" class="imagen-tarjeta">
+                <h2 class="titulo-tarjeta">Tokio Moderno</h2>
+                <p class="descripcion-tarjeta">Descubre la mezcla perfecta de tradición y modernidad en la ciudad que nunca duerme.</p>
+                <!--parte de abajo de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$1890 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+
+            </article>
+
+            <!-- Tarjeta 5 -->
+            <article class="tarjeta-viaje" data-name="Roma Clásica">
+                <img src="../img/roma.jpg" alt="Imagen roma" class="imagen-tarjeta">
+                <h2 class="titulo-tarjeta">Roma Clásica</h2>
+                <p class="descripcion-tarjeta">Explora la historia y la arquitectura de la antigua Roma, donde cada calle cuenta una historia.</p>
+                <!--parte de abajo de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$2000 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+            </article>
+
+            <!-- Tarjeta 6 -->
+            <article class="tarjeta-viaje" data-name="Bariloche Natural">
+                <img src="../img/bariloche.jpg" alt="Imagen bariloche" class="imagen-tarjeta">
+                <h2 class="titulo-tarjeta">Bariloche Natural</h2>
+                <p class="descripcion-tarjeta">Sumérgete en la belleza natural de Bariloche, con sus lagos cristalinos y montañas majestuosas.</p>
+                <!--parte de abajo de la tarjeta -->
+                <div class="info-tarjeta">
+                    <p class="precio">$2100 USD</p>
+                    <button class="boton-agregar">Agregar +</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Scripts JavaScript -->
+    <script src="./js/app.js" defer></script>
+    <script src="./js/cards.js" defer></script>
 
 </body>
 

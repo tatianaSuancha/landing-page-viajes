@@ -280,7 +280,7 @@ body {
     /* Aqui se define el espacio interior de todos los elementos */
     padding: 0;
 
-    /* Aqui se hace que el ancho y el alto incluyan 
+    /* Aqui se hace que el ancho y el alto incluyan
             el padding y el borde del elemento*/
     box-sizing: border-box;
 }
@@ -288,7 +288,7 @@ body {
 /* Y se definen los estilos generales  para el hero */
 body {
 
-    /* Se usa Arial como fuente principal y Si no está 
+    /* Se usa Arial como fuente principal y Si no está
             disponible, se usa Helvetica o una fuente sans-serif*/
     font-family: Arial, Helvetica, sans-serif;
 
@@ -316,21 +316,20 @@ body {
     /* Se centra el contenido verticalmente */
     align-items: center;
 
-    /* Agrego 40 píxeles de espacio arriba y abajo 
+    /* Agrego 40 píxeles de espacio arriba y abajo
             y 20 píxeles a los lados*/
     padding: 40px 20px;
 
     /* Se coloca una capa oscura sobre la imagen para leer mejor el texto */
     background-image:
 
-        /* Se crea una capa oscura para que el texto 
+        /* Se crea una capa oscura para que el texto
                 blanco se pueda leer mejor */
         linear-gradient(rgba(15, 23, 42, 0.38),
             rgba(15, 23, 42, 0.38)),
 
-        /* Se coloca la imagen principal que tengo 
-                guardada en la carpeta img*/
-        url("../img/fondo-viajes.png");
+        /* Se coloca la imagen principal */
+        url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1600&q=80");
 
 
     /* Ahora se hace que la imagen cubra todo el HERO */
@@ -345,7 +344,7 @@ body {
 
 }
 
-/* Ahora aqui se organiza el título, el texto y el botón en 
+/* Ahora aqui se organiza el título, el texto y el botón en
         una columna */
 .contenedor-hero {
 
@@ -539,7 +538,7 @@ body {
         /* Aqui evito que el botón sea más ancho de 300 píxeles */
         max-width: 300px;
 
-        /* Agrego 16 píxeles de espacio arriba y abajo, y 
+        /* Agrego 16 píxeles de espacio arriba y abajo, y
                 20 píxeles a los lados*/
         padding: 16px 20px;
 
@@ -549,4 +548,224 @@ body {
         /* Aqui se define el texto dentro del botón */
         text-align: center;
     }
+}
+
+/* Aqui se inicia  la parte de paula*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Efecto de transición suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+    /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    /* Sombra más pronunciada */
+}
+
+/* --- Encabezado e Imagen --- */
+.card-header {
+    position: relative;
+    height: 180px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Cuerpo de la tarjeta --- */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.card-body h3 {
+    color: #0d233a;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.card-body p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+/* --- Footer de la tarjeta --- */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    color: #2563eb;
+    font-size: 1.3rem;
+}
+
+.price small {
+    color: #a0aec0;
+    font-size: 0.8rem;
+}
+
+/* --- Botón interactivo --- */
+.btn-add {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-add:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-add:active {
+    transform: scale(0.95);
+    /* Simula el click comprimiéndose */
+}
+
+/* Aqui finaliza la parte de paula*/
+
+.contenedor-tarjetas {
+    display: flex;
+    /* flexbox que permite organizar las tarjetas*/
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* permite que las tarjetas se ajusten a la pantalla y se muevan a la siguiente línea si es necesario */
+}
+
+.tarjeta-viaje {
+    width: 330px;
+    background-color: white;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    /* esquinas redondeadas */
+    overflow: hidden;
+    /* oculta el contenido que sobresale */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-viaje:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    /* ajusta la imagen sin deformarla */
+}
+
+.titulo-tarjeta {
+    font-size: 1.5rem;
+    margin: 20px 20px 10px;
+}
+
+.descripcion-tarjeta {
+    margin: 0 20px;
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.info-tarjeta {
+    display: flex;
+    /* coloca el precio y el botón en la misma fila */
+    justify-content: space-between;
+    /* deja el precio a la izquierda y el botón a la derecha */
+    align-items: center;
+    margin: 25px 20px 20px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.boton-agregar {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    /* esquinas redondeadas */
+    cursor: pointer;
+    /* cambia el cursor a una mano al pasar sobre el botón */
+    font-size: 0.95rem;
+    transition: var(--transicion-suave);
+}
+
+.boton-agregar:hover {
+    background-color: var(--color-primario-hover);
+    /* cambia el color del botón al pasar el cursor */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.seccion-paquetes {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--color-texto);
 }
